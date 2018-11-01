@@ -1,0 +1,35 @@
+{
+  "name": "node-red-contrib-jenkins",
+  "version": "0.0.6",
+  "description": "",
+  "keywords": [
+    "node-red",
+    "jenkins"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "pretest": "npm install",
+    "test": "mocha"
+  },
+  "author": "Felipe Plets <felipe@plets.me> (http://plets.me)",
+  "license": "ISC",
+  "dependencies": {
+    "jenkins": "^0.22.1",
+    "urijs": "^1.19.1"
+  },
+  "node-red": {
+    "nodes": {
+      "jenkins-credentials": "nodes/config-server.js",
+      "jenkins-status": "nodes/status.js",
+      "jenkins-job": "nodes/job.js",
+      "jenkins-build": "nodes/build.js"
+    }
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^5.1.0",
+    "eslint-config-google": "^0.9.1",
+    "eslint-watch": "^4.0.1",
+    "mocha": "^5.2.0"
+  }
+}
